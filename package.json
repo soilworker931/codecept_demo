@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "smoke": "npx codeceptjs run -c codecept.conf.ts tests/LoginPage_test.ts",
+    "separateTest": "npx codeceptjs run -c codecept.conf.ts --grep @smoke",
+    "parallelTesting": "npx codeceptjs run-workers 2 -c codecept.conf.ts --grep @somethingInParallel"
+  },
+  "dependencies": {
+    "codeceptjs": "^3.5.3",
+    "playwright": "^1.36.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.6",
+    "allure-codeceptjs": "^2.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
